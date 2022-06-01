@@ -6,6 +6,7 @@ Maven 'mvn3.8.5'
 stages[
 stage('checkout')
 steps{
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/krishnareddy830/Jenkins.git']]])
 }
 }
 }
